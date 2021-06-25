@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    height: 50px;
+    padding:15px;
+}
+
+nav ul{
+    float:right;
+    display: inline;
+}
+
+.logo{
+    display: inline;
+}
+
+.logo h1{
+    display: inline;
+    color:#db0000;
+}
+
+nav ul li{
+    display: inline;
+    padding: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:#db0000;
+}
+
+#check{
+    display: none;
+}
+
+#icon{
+    float: right;
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    #icon{
+        display: inline;
+    }
+    nav ul{
+        display: none;
+    }
+    #check:checked ~ul{
+        display:flex;
+        flex-direction: column;
+        width:120vw;
+        height: 100vh;
+        background-color: black;
+        margin-left:10vw;
+        margin-right: -10vw;
+        padding:0 0 ;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    nav ul li{
+        padding:0;
+    }
+    nav ul li a{
+        padding:0;
+    }
+}
